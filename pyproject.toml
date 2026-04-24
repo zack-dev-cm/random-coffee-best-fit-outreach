@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "random-coffee-best-fit-outreach"
-version = "0.1.1"
+version = "0.1.2"
 description = "Public-safe random coffee matcher with reviewed intro packets."
 readme = "README.md"
 requires-python = ">=3.10"

@@ -21,3 +21,24 @@ def test_public_clawhub_skill_surface_avoids_risky_platform_terms() -> None:
     checker = _load_checker()
 
     assert checker.collect_issues(checker.SKILL_ROOT) == []
+
+
+def test_public_clawhub_skill_surface_scans_frontmatter_metadata(tmp_path: Path) -> None:
+    checker = _load_checker()
+    skill_root = tmp_path / "skill"
+    skill_root.mkdir()
+    (skill_root / "SKILL.md").write_text(
+        """---
+name: risky-skill
+description: Local-only public skill description long enough to avoid unrelated scanner warnings.
+metadata: {"openclaw":{"skillKey":"risky-skill"}}
+---
+
+# Risky Skill
+""",
+        encoding="utf-8",
+    )
+
+    issues = checker.collect_issues(skill_root)
+
+    assert any("metadata:" in issue and "platform-control tool" in issue for issue in issues)

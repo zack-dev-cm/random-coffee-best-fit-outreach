@@ -33,8 +33,6 @@ def collect_issues(root: Path = SKILL_ROOT) -> list[str]:
     for path in iter_skill_text_files(root):
         text = path.read_text(encoding="utf-8")
         for line_number, line in enumerate(text.splitlines(), start=1):
-            if path.name == "SKILL.md" and line.lstrip().startswith("metadata:"):
-                continue
             for label, pattern in RISK_PATTERNS:
                 if pattern.search(line):
                     relative = path.relative_to(root)

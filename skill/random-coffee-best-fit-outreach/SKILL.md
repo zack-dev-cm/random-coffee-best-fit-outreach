@@ -1,11 +1,6 @@
 ---
 name: random-coffee-best-fit-outreach
 description: Offline random coffee skill for ranking opt-in people and preparing consent-first intro packets. It creates local reports only; any external communication stays outside the public skill.
-version: 0.1.1
-homepage: https://github.com/zack-dev-cm/random-coffee-best-fit-outreach
-license: MIT-0
-user-invocable: true
-metadata: {"openclaw":{"skillKey":"random-coffee-best-fit-outreach","requires":{"anyBins":["python3","python"]}}}
 ---
 
 # Random Coffee Best Fit Outreach
