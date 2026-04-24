@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "random-coffee-best-fit-outreach"
-version = "0.1.0"
-description = "Public-safe random coffee matcher with reviewed LinkedIn or Discord outreach packets."
+version = "0.1.1"
+description = "Public-safe random coffee matcher with reviewed intro packets."
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
@@ -15,10 +15,6 @@ authors = [
 keywords = [
   "random coffee",
   "networking",
-  "linkedin",
-  "discord",
-  "openclaw",
-  "computer-use",
   "codex",
   "matching"
 ]

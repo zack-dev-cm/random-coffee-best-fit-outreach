@@ -1,10 +1,10 @@
 # Random Coffee Best Fit Outreach
 
-**Rank opt-in random coffee matches and prepare reviewed LinkedIn or Discord outreach packets.**
+**Rank opt-in random coffee matches and prepare reviewed intro packets.**
 
-This repo turns a chat-first random coffee prototype into a public, inspectable workflow for best-fit 1:1 introductions. It keeps the useful part, matching people by mutual utility, and uses a Codex + OpenClaw or Computer Use operating loop for reviewed manual outreach on LinkedIn or Discord.
+This repo turns a chat-first random coffee prototype into a public, inspectable workflow for best-fit 1:1 introductions. It keeps the useful part: matching people by mutual utility and preparing an offline packet that an operator can review.
 
-It is not a LinkedIn scraper, Discord selfbot, stealth messenger, or auto-DM bot. The CLI works from participant data you are allowed to use. The skill helps Codex create drafts, review profile context in an operator-controlled browser or GUI session, and log what a human approved.
+It is not a messaging tool. The CLI works from participant data you are allowed to use. The skill helps Codex create drafts and review packets; external communication stays outside the public skill.
 
 ## Quick Start
 
@@ -35,7 +35,7 @@ random-coffee-matcher template --out /tmp/random-coffee-people.csv
 - scores pair fit from offers, needs, skills, domains, language, timezone, and explicit do-not-match constraints
 - renders ranked match reports with transparent reasons and risks
 - drafts double opt-in messages that do not reveal the other person's identity before consent
-- includes a Codex skill for reviewed LinkedIn or Discord outreach using OpenClaw or Computer Use
+- includes a Codex skill for offline intro packet review
 
 ## CSV Columns
 
@@ -50,9 +50,9 @@ Comma-like fields can use `;`, `,`, or `|` separators. `do_not_match` contains p
 ## Public Boundary
 
 - Use participant-provided, consented, or intentionally public profile data.
-- Keep LinkedIn and Discord review read-only unless the user explicitly approves a live manual send.
-- Do not automate unsolicited LinkedIn messaging, Discord DMs, joins, invites, or server actions.
-- Do not bypass login, captcha, rate limits, platform protections, or user privacy settings.
+- Keep external communication outside the public skill.
+- Do not add platform-control, account-action, or message-delivery behavior.
+- Do not bypass platform protections or user privacy settings.
 - Store summaries and tags for matching; avoid copying private messages or long post excerpts into public artifacts.
 - Run double opt-in before revealing identities, handles, links, or detailed context.
 
@@ -69,6 +69,7 @@ Comma-like fields can use `;`, `,`, or `|` separators. `do_not_match` contains p
 ```bash
 python3 -m pytest -q
 python3 -m random_coffee_matcher rank examples/participants.csv --format text
+python3 scripts/check_clawhub_skill_surface.py
 ```
 
 ## Security
