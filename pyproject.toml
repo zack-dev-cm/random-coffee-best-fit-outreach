@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "random-coffee-best-fit-outreach"
+version = "0.1.0"
+description = "Public-safe random coffee matcher with reviewed LinkedIn or Discord outreach packets."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "Random Coffee Best Fit Outreach contributors"}
+]
+keywords = [
+  "random coffee",
+  "networking",
+  "linkedin",
+  "discord",
+  "openclaw",
+  "computer-use",
+  "codex",
+  "matching"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Office/Business :: Scheduling"
+]
+
+[project.scripts]
+random-coffee-matcher = "random_coffee_matcher.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
