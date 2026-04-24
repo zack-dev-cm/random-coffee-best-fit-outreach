@@ -1,6 +1,10 @@
 ---
 name: random-coffee-best-fit-outreach
 description: Consent-first random coffee skill for ranking best-fit people, drafting double opt-in LinkedIn or Discord outreach, and logging reviewed OpenClaw or Computer Use work without Telegram bot execution, selfbots, scraping, or automated sending.
+version: 0.1.0
+homepage: https://github.com/zack-dev-cm/random-coffee-best-fit-outreach
+license: MIT-0
+user-invocable: true
 metadata: {"openclaw":{"skillKey":"random-coffee-best-fit-outreach","requires":{"anyBins":["python3","python"]}}}
 ---
 
