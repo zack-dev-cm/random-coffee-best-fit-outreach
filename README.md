@@ -79,3 +79,7 @@ See [SECURITY.md](SECURITY.md) for responsible disclosure and public-surface bou
 ## License
 
 MIT
+
+## Download History
+
+[![Download History](https://skill-history.com/chart/zack-dev-cm/random-coffee-best-fit-outreach.svg)](https://skill-history.com/zack-dev-cm/random-coffee-best-fit-outreach)
